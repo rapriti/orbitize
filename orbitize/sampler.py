@@ -591,13 +591,14 @@ class OFTI(
                         )
                         OFTI_warning = None
                 print(
-                    str(orbits_saved.value) + "/" + str(total_orbits) + " orbits found",
+                    f"{orbits_saved.value}/{total_orbits} ({round(100*orbits_saved.value/total_orbits,1)}%) orbits found",
                     end="\r",
                 )
                 time.sleep(0.1)
 
             print(
-                str(total_orbits) + "/" + str(total_orbits) + " orbits found", end="\r"
+                f"{orbits_saved.value}/{total_orbits} ({round(100*orbits_saved.value/total_orbits,1)}%) orbits found",
+                end="\r"
             )
 
             # join the processes
